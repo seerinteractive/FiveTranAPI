@@ -10,11 +10,11 @@ import yaml
 
 # local
 
-from auth import Auth
-from client import FiveTranAPI
+from fivetran.auth import Auth
+from fivetran.client import FiveTranAPI
 
-from exceptions import MissingRequiredParameters
-from exceptions import ReportNotImplemented
+from fivetran.common.exceptions import MissingRequiredParameters
+from fivetran.common.exceptions import ReportNotImplemented
 
 sys.path.append("..")
 
@@ -22,8 +22,8 @@ sys.path.append("..")
 @pytest.fixture
 def auth():
 
-    FIVETRAN_API_KEY = os.environ["FIVETRAN_API_KEY"]
-    FIVETRAN_API_SECRET = os.environ["FIVETRAN_API_SECRET"]
+    FIVETRAN_API_KEY = os.environ.get("FIVETRAN_API_KEY", "123")
+    FIVETRAN_API_SECRET = os.environ.get("FIVETRAN_API_SECRET", "123")
 
     return Auth(api_key=FIVETRAN_API_KEY, api_secret=FIVETRAN_API_SECRET)
 

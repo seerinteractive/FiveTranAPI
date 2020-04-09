@@ -1,0 +1,40 @@
+group:
+  - name: get_groups
+    path: groups
+    method: GET
+    dict_path:
+      - data
+      - items
+  - name: get_connectors
+    path: groups/{group_id}/connectors
+    method: GET
+    required: 
+      - group_id
+    dict_path:
+      - data
+      - items
+  - name: get_group_details
+    path: groups/{group_id}
+    method: GET
+    required: 
+      - group_id
+    dict_path:
+      - data 
+connector:
+  - name: create_connector
+    path: connectors
+    method: POST    
+    dict_path:
+      - data
+  - name: connector_details
+    path: connectors/{connector_id}
+    method: GET
+    required: 
+      - connector_id
+    dict_path:
+      - data
+  - name: modify_connector
+    path: connectors/{connector_id}
+    method: PATCH    
+    dict_path:
+      - data          
