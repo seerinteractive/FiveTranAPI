@@ -4,7 +4,7 @@ with open("README.rst", "rt", encoding="utf8") as f:
     readme = f.read()
 
 setup(
-    name="FiveTran API Client",
+    name="FiveTranAPI",
     version="1.0",
     description="Simple wrapper for FiveTran's API",
     author="Ethan Lyon",
@@ -16,5 +16,6 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
+    packages=["fivetran", "fivetran.common"],
 )
 __author__ = "Ethan Lyon"
