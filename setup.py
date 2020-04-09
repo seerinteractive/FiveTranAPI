@@ -1,5 +1,7 @@
 from setuptools import setup
 
+with open("README.rst", "rt", encoding="utf8") as f:
+    readme = f.read()
 
 setup(
     name="FiveTran API Client",
@@ -7,6 +9,12 @@ setup(
     description="Simple wrapper for FiveTran's API",
     author="Ethan Lyon",
     author_email="ethanlyon@gmail.com",
-    packages=["pytest", "requests"],
+    install_requires=["pytest==5.4.1", "requests==2.23.0"],
+    license="MIT",
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+    ],
 )
 __author__ = "Ethan Lyon"
