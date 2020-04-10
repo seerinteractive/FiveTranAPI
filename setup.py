@@ -17,5 +17,7 @@ setup(
         "Programming Language :: Python :: 3.7",
     ],
     packages=["fivetran", "fivetran.common"],
+    package_data={"": ["registry.yaml"]},
+    include_package_data=True,
 )
 __author__ = "Ethan Lyon"

@@ -42,20 +42,20 @@ The categories and endpoints can be registered in the registry.yaml file. The ya
 
 
   connector:
-    - name: connector_details
+    \- name: connector_details
       path: connectors/{connector_id}
       method: GET
       required: 
-        - connector_id
+        \- connector_id
       dict_path:
-        - data
+        \- data
 
 
 It's otherwise denoted:
 
 
   category:
-      - name # name of the endpoint
+      \- name # name of the endpoint
         path # template found here: https://fivetran.com/docs/rest-api
         method # HTTP method
         required # any required parameters, e.g connector_id
@@ -70,5 +70,5 @@ Testing
   FIVETRAN_API_KEY=<api-key> FIVETRAN_API_SECRET=<secret> pytest -m main -s -v
 
 
-## TODO
+*TODO*
  * add the remaining API endpoints to the registry.yaml file

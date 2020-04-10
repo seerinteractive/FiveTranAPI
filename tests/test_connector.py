@@ -15,26 +15,10 @@ from fivetran.client import FiveTranAPI
 from fivetran.common.exceptions import MissingRequiredParameters
 from fivetran.common.exceptions import ReportNotImplemented
 
-sys.path.append("..")
+from tests.fixtures import auth
+from tests.fixtures import api
+from tests.fixtures import _load_json
 
-
-@pytest.fixture
-def auth():
-
-    FIVETRAN_API_KEY = os.environ.get("FIVETRAN_API_KEY", "123")
-    FIVETRAN_API_SECRET = os.environ.get("FIVETRAN_API_SECRET", "123")
-
-    return Auth(api_key=FIVETRAN_API_KEY, api_secret=FIVETRAN_API_SECRET)
-
-
-@pytest.fixture
-def api(auth):
-    return FiveTranAPI(auth=auth)
-
-
-def _load_json(filename):
-    with open(f"data/{filename}.json", "r") as f:
-        return json.loads(f.read())
 
 
 @pytest.mark.create_connector

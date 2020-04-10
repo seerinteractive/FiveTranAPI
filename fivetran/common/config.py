@@ -2,8 +2,9 @@ import yaml
 import sys
 import os
 
+path = os.path.dirname(os.path.abspath(__file__))
 
-with open(f"{sys.path[0]}/fivetran/common/registry.yaml", "r") as stream:
+with open(f"{path}/registry.yaml", "r") as stream:
 
     try:
         request_registry = yaml.safe_load(stream)
