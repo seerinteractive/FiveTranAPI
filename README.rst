@@ -1,7 +1,7 @@
 Getting Started
 ===============
 
-Head over to [FiveTran's API documentation](https://fivetran.com/docs/getting-started) to obtain an API key and secret.
+Head over to `FiveTran's API documentation <https://fivetran.com/docs/getting-started>`_ to obtain an API key and secret.
 
 Installation
 ============
@@ -12,7 +12,7 @@ Installation
 Usage
 =====
 
-The FiveTran API Client uses attributes to build file paths, similar to [Google's Discovery JSON API](https://developers.google.com/discovery/v1/using).
+The FiveTran API Client uses attributes to build file paths, similar to `Google's Discovery JSON API <https://developers.google.com/discovery/v1/using>`_.
 
 For example, if we wanted to get all groups, we would do the following:
 
@@ -40,6 +40,7 @@ For example, if we wanted to get all groups, we would do the following:
 
 The categories and endpoints can be registered in the registry.yaml file. The yaml for the above request (category=connector, endpoint=connector_details) is:
 
+..
 
   connector:
     \- name: connector_details
@@ -53,10 +54,11 @@ The categories and endpoints can be registered in the registry.yaml file. The ya
 
 It's otherwise denoted:
 
+..
 
   category:
       \- name # name of the endpoint
-        path # template found here: https://fivetran.com/docs/rest-api
+        path # template found `here <https://fivetran.com/docs/rest-api>`_
         method # HTTP method
         required # any required parameters, e.g connector_id
         dict_path # path to find a value, e.g. -data -items would be used for {'data': {'items': 1}}
@@ -70,5 +72,5 @@ Testing
   FIVETRAN_API_KEY=<api-key> FIVETRAN_API_SECRET=<secret> pytest -m main -s -v
 
 
-*TODO*
+**TODO**
  * add the remaining API endpoints to the registry.yaml file
