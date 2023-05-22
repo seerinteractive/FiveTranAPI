@@ -9,7 +9,7 @@ setup(
     description="Simple wrapper for FiveTran's API",
     author="Ethan Lyon",
     author_email="ethanlyon@gmail.com",
-    install_requires=["pytest==5.4.1", "requests==2.23.0"],
+    install_requires=["pytest==5.4.1", "requests==2.31.0"],
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
